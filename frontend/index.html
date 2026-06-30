@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>毕业照片 · 人脸标注</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">毕业照片 · 人脸标注</div>
+    <div class="stats" id="stats"></div>
+    <div class="top-actions">
+      <label class="toggle"><input type="checkbox" id="hideHandled" /> 隐藏已处理</label>
+      <button id="exportAllBtn" class="btn-primary sm">一键全导出</button>
+      <button id="reloadBtn" class="btn-ghost sm">刷新</button>
+    </div>
+  </header>
+
+  <main id="board" class="board"></main>
+  <p id="empty" class="empty hidden">还没有聚类。请先跑 build_index 和 cluster_persons。</p>
+
+  <!-- 某人全部照片（平铺视图） -->
+  <section id="gallery" class="gallery hidden">
+    <div class="gallery-head">
+      <button id="galleryBack" class="btn-ghost sm">← 返回标注</button>
+      <strong id="galleryTitle"></strong>
+      <span id="galleryCount" class="count"></span>
+      <div class="gallery-actions">
+        <button id="galleryZip" class="btn-primary sm">下载该人 zip</button>
+      </div>
+    </div>
+    <div id="galleryGrid" class="gallery-grid"></div>
+  </section>
+
+  <!-- 合照预览灯箱 -->
+  <div id="lightbox" class="lightbox hidden">
+    <button class="lb-close" id="lbClose">×</button>
+    <img id="lbImg" class="lb-img" alt="" />
+    <div class="lb-bar">
+      <span id="lbInfo"></span>
+      <button id="lbDownload" class="btn-primary">下载原图</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+*.egg
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Data & artifacts (keep .gitkeep placeholders only)
+data/originals/*
+!data/originals/.gitkeep
+data/thumbnails/*
+!data/thumbnails/.gitkeep
+data/face_crops/*
+!data/face_crops/.gitkeep
+data/exports/*
+!data/exports/.gitkeep
+db/*
+!db/.gitkeep
+index/*
+!index/.gitkeep
+
+# InsightFace model cache
+.insightface/
+
+# Logs
+*.log
+server.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
